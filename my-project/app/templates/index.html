@@ -1,0 +1,14 @@
+<!-- index.html-->
+
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block body %}
+<div class = "jumbotron">
+  <h1>Flask is Awesome</h1>
+  <p class="lead">And i'm glad to be learning so much about it!</p>
+  {% if session.logged_in == NULL %}
+  <a href = "/register" class="btn btn-primary btn-lg">Register</a>
+  <a href = "/login" class = "btn btn-success btn-lg">login</a>
+  {% endif %}
+</div>
+{% endblock %}
